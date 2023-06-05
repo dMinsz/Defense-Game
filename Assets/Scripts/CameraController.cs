@@ -50,6 +50,9 @@ public class CameraController : MonoBehaviour
     {
         Vector2 mousePos = value.Get<Vector2>();
 
+        //-padding 은 마우스가 게임 화면 넘어갔을때
+        //안움직이게 하려고함
+
         if (-padding <= mousePos.x && mousePos.x <= padding) // 좌측
             moveDir.x = -1;
         else if (Screen.width - padding <= mousePos.x && mousePos.x <= Screen.width + padding) // 우측
@@ -57,7 +60,8 @@ public class CameraController : MonoBehaviour
         else // 둘다아니면 안움직임
             moveDir.x = 0;
 
-        if (-padding <= mousePos.y && mousePos.y <= padding) // 아래쪽?
+        if (-padding <= mousePos.y && mousePos.y <= padding) // 아래쪽
+
             moveDir.z = -1;
         else if (Screen.height - padding <= mousePos.y && mousePos.y <= Screen.height + padding)//위쪽
             moveDir.z = 1;
