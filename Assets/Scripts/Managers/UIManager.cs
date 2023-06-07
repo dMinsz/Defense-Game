@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     private EventSystem eventSystem;
 
     private Canvas popUpCanvas;
-    //private Stack<PopUpUI> popUpStack;
+    private Stack<PopUpUI> popUpStack;
 
     private Canvas windowCanvas;
 
@@ -22,67 +22,74 @@ public class UIManager : MonoBehaviour
         eventSystem = GameManager.Resource.Instantiate<EventSystem>("UI/EventSystem");
         eventSystem.transform.parent = transform;
 
-        //popUpCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
-        //popUpCanvas.gameObject.name = "PopUpCanvas";
-        //popUpCanvas.sortingOrder = 100;
-        //popUpStack = new Stack<PopUpUI>();
+        popUpCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+        popUpCanvas.gameObject.name = "PopUpCanvas";
+        popUpCanvas.sortingOrder = 100;
+        popUpStack = new Stack<PopUpUI>();
 
-        //windowCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
-        //windowCanvas.gameObject.name = "WindowCanvas";
-        //windowCanvas.sortingOrder = 10;
+        windowCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+        windowCanvas.gameObject.name = "WindowCanvas";
+        windowCanvas.sortingOrder = 10;
 
-        //// gameSceneCanvas.sortingOrder = 1;
+        // gameSceneCanvas.sortingOrder = 1;
 
-        //inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
-        //inGameCanvas.gameObject.name = "InGameCanvas";
-        //inGameCanvas.sortingOrder = 0;
+        inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+        inGameCanvas.gameObject.name = "InGameCanvas";
+        inGameCanvas.sortingOrder = 0;
     }
 
-    //public T ShowPopUpUI<T>(T popUpUI) where T : PopUpUI
-    //{
-    //    if (popUpStack.Count > 0)
-    //    {
-    //        PopUpUI prevUI = popUpStack.Peek();
-    //        prevUI.gameObject.SetActive(false);
-    //    }
+    public T ShowPopUpUI<T>(T popUpUI) where T : PopUpUI
+    {
+        if (popUpStack.Count > 0)
+        {
+            PopUpUI prevUI = popUpStack.Peek();
+            prevUI.gameObject.SetActive(false);
+        }
 
-    //    T ui = GameManager.Pool.GetUI<T>(popUpUI);
-    //    ui.transform.SetParent(popUpCanvas.transform, false);
-    //    popUpStack.Push(ui);
+        T ui = GameManager.Pool.GetUI<T>(popUpUI);
+        ui.transform.SetParent(popUpCanvas.transform, false); // 본인의 위치를 가지고 다른 캔버스로 이동
+        popUpStack.Push(ui);
 
-    //    Time.timeScale = 0f;
-    //    return ui;
-    //}
+        //게임멈추기
+        Time.timeScale = 0f;
+        return ui;
+    }
 
-    //public T ShowPopUpUI<T>(string path) where T : PopUpUI
-    //{
-    //    T ui = GameManager.Resource.Load<T>(path);
-    //    return ShowPopUpUI(ui);
-    //}
+    public T ShowPopUpUI<T>(string path) where T : PopUpUI
+    {
+        T ui = GameManager.Resource.Load<T>(path);
+        return ShowPopUpUI(ui);
+    }
 
-    //public void ClosePopUpUI()
-    //{
-    //    PopUpUI ui = popUpStack.Pop();
-    //    GameManager.Pool.ReleaseUI(ui.gameObject);
+    public PopUpUI ShowPopUpUI(string path) 
+    {
+        PopUpUI ui = GameManager.Resource.Load<PopUpUI>(path);
+        return ShowPopUpUI(ui);
+    }
 
-    //    if (popUpStack.Count > 0)
-    //    {
-    //        PopUpUI curUI = popUpStack.Peek();
-    //        curUI.gameObject.SetActive(true);
-    //    }
-    //    else
-    //    {
-    //        Time.timeScale = 1f;
-    //    }
-    //}
+    public void ClosePopUpUI()
+    {
+        PopUpUI ui = popUpStack.Pop();
+        GameManager.Pool.ReleaseUI(ui.gameObject);
 
-    //public void ClearPopUpUI()
-    //{
-    //    while (popUpStack.Count > 0)
-    //    {
-    //        ClosePopUpUI();
-    //    }
-    //}
+        if (popUpStack.Count > 0)
+        {
+            PopUpUI curUI = popUpStack.Peek();
+            curUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void ClearPopUpUI()
+    {
+        while (popUpStack.Count > 0)
+        {
+            ClosePopUpUI();
+        }
+    }
 
     //public T ShowWindowUI<T>(T windowUI) where T : WindowUI
     //{
