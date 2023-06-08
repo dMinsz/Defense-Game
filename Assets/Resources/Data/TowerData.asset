@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f543c9d2e485334cb324bd59b1e69ed, type: 3}
+  m_Name: TowerData
+  m_EditorClassIdentifier: 
+  towers:
+  - name: ArchorTower
+    description: That is Archor Tower
+    tower: {fileID: 4582418167461619081, guid: 229d27152e8a2ae4da5a66bbac9c85c7, type: 3}
+    buildTime: 1
+    buildCost: 10
+    sellCost: 5
+  - name: CanonTower
+    description: That is Canon Tower
+    tower: {fileID: 7843634574687890928, guid: 0bb5efdba1843404cab4d145eb286a9c, type: 3}
+    buildTime: 3
+    buildCost: 20
+    sellCost: 10
+  - name: MageTower
+    description: That is Mage Tower
+    tower: {fileID: 8135388393784374020, guid: d84d885ee31a7664e8601d7a89d3d603, type: 3}
+    buildTime: 3
+    buildCost: 25
+    sellCost: 15

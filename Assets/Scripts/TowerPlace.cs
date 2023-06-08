@@ -26,7 +26,7 @@ public class TowerPlace : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         BuildUI buildUI = GameManager.UI.ShowInGameUI<BuildUI>("UI/BuildMenuUI");
         buildUI.SetTowerPlace(this);
         buildUI.SetTarget(transform);
-        buildUI.SetOffset(new Vector3(200, 0));
+        buildUI.SetOffset(new Vector3(50, 50));
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -39,9 +39,16 @@ public class TowerPlace : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         render.material.color = normal;
     }
 
-    public void BuildTower(string tower)
+    public void BuildTower(TowerData data)
     {
-        Debug.Log(tower);
+        GameManager.Resource.Destroy(gameObject);
+        GameManager.Resource.Instantiate(data.Towers[0].tower, transform.position, transform.rotation);
+    }
+
+    public void BuildTower(TowerData.TowerInfo info)
+    {
+        GameManager.Resource.Destroy(gameObject);
+        GameManager.Resource.Instantiate(info.tower, transform.position, transform.rotation);
     }
 
 

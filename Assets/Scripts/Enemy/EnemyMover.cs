@@ -48,7 +48,11 @@ public class EnemyMover : MonoBehaviour
         StopCoroutine(MoveRoutine());
         OnMoveEnded?.Invoke();
     }
-
+    public void StopMove()
+    {
+        agent.isStopped = true;
+        StopCoroutine(moveRoutine);
+    }
     private void ToNextPoint()
     {
         agent.destination = wayPoints[curWayIndex].position;
