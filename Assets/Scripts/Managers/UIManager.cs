@@ -31,13 +31,12 @@ public class UIManager : MonoBehaviour
         windowCanvas.gameObject.name = "WindowCanvas";
         windowCanvas.sortingOrder = 10;
 
-        // gameSceneCanvas.sortingOrder = 1;
-
         inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
         inGameCanvas.gameObject.name = "InGameCanvas";
         inGameCanvas.sortingOrder = 0;
     }
 
+    //PopUp UI
     public T ShowPopUpUI<T>(T popUpUI) where T : PopUpUI
     {
         if (popUpStack.Count > 0)
@@ -90,7 +89,7 @@ public class UIManager : MonoBehaviour
             ClosePopUpUI();
         }
     }
-
+    //Window UI
     public T ShowWindowUI<T>(T windowUI) where T : WindowUI
     {
         T ui = GameManager.Pool.GetUI(windowUI);
@@ -124,6 +123,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //InGameUI
     public T ShowInGameUI<T>(T gameUi) where T : InGameUI
     {
         T ui = GameManager.Pool.GetUI(gameUi);

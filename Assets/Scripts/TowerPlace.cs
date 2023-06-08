@@ -23,10 +23,10 @@ public class TowerPlace : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //BuildInGameUI buildUI = GameManager.UI.ShowInGameUI<BuildInGameUI>("UI/BuildInGameUI");
-        //buildUI.SetTowerPlace(this);
-        //buildUI.SetTarget(transform);
-        //buildUI.SetOffset(new Vector3(200, 0));
+        BuildUI buildUI = GameManager.UI.ShowInGameUI<BuildUI>("UI/BuildMenuUI");
+        buildUI.SetTowerPlace(this);
+        buildUI.SetTarget(transform);
+        buildUI.SetOffset(new Vector3(200, 0));
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -43,4 +43,6 @@ public class TowerPlace : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         Debug.Log(tower);
     }
+
+
 }
