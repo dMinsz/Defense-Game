@@ -33,9 +33,9 @@ public class UIManager : MonoBehaviour
 
         // gameSceneCanvas.sortingOrder = 1;
 
-        //inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
-        //inGameCanvas.gameObject.name = "InGameCanvas";
-        //inGameCanvas.sortingOrder = 0;
+        inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+        inGameCanvas.gameObject.name = "InGameCanvas";
+        inGameCanvas.sortingOrder = 0;
     }
 
     public T ShowPopUpUI<T>(T popUpUI) where T : PopUpUI
@@ -124,32 +124,32 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    //public T ShowInGameUI<T>(T gameUi) where T : InGameUI
-    //{
-    //    T ui = GameManager.Pool.GetUI(gameUi);
-    //    ui.transform.SetParent(inGameCanvas.transform, false);
+    public T ShowInGameUI<T>(T gameUi) where T : InGameUI
+    {
+        T ui = GameManager.Pool.GetUI(gameUi);
+        ui.transform.SetParent(inGameCanvas.transform, false);
 
-    //    return ui;
-    //}
+        return ui;
+    }
 
-    //public T ShowInGameUI<T>(string path) where T : InGameUI
-    //{
-    //    T ui = GameManager.Resource.Load<T>(path);
-    //    return ShowInGameUI(ui);
-    //}
+    public T ShowInGameUI<T>(string path) where T : InGameUI
+    {
+        T ui = GameManager.Resource.Load<T>(path);
+        return ShowInGameUI(ui);
+    }
 
-    //public void CloseInGameUI<T>(T inGameUI) where T : InGameUI
-    //{
-    //    GameManager.Pool.ReleaseUI(inGameUI.gameObject);
-    //}
+    public void CloseInGameUI<T>(T inGameUI) where T : InGameUI
+    {
+        GameManager.Pool.ReleaseUI(inGameUI.gameObject);
+    }
 
-    //public void ClearInGameUI()
-    //{
-    //    InGameUI[] inGames = inGameCanvas.GetComponentsInChildren<InGameUI>();
+    public void ClearInGameUI()
+    {
+        InGameUI[] inGames = inGameCanvas.GetComponentsInChildren<InGameUI>();
 
-    //    foreach (InGameUI inGameUI in inGames)
-    //    {
-    //        GameManager.Pool.ReleaseUI(inGameUI.gameObject);
-    //    }
-    //}
+        foreach (InGameUI inGameUI in inGames)
+        {
+            GameManager.Pool.ReleaseUI(inGameUI.gameObject);
+        }
+    }
 }

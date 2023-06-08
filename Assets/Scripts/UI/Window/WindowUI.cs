@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class WindowUI : BaseUI, IDragHandler
+public class WindowUI : BaseUI, IDragHandler , IPointerDownHandler
 {
     protected override void Awake()
     {
@@ -15,5 +15,11 @@ public class WindowUI : BaseUI, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         transform.position += (Vector3)eventData.delta;
+    }
+
+    //Window UI focus
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        GameManager.UI.SelectWindowUI(this);
     }
 }
