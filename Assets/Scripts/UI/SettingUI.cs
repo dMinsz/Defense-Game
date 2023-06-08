@@ -8,7 +8,7 @@ public class SettingUI : SceneUI
     {
         base.Awake();
 
-        buttons["InfoButton"].onClick.AddListener(() => { Debug.Log("Info Button"); });
+        buttons["InfoButton"].onClick.AddListener(() => { OpenInfoWindowUI(); });
         buttons["SettingButton"].onClick.AddListener(() => { OpenPausePopUpUI(); });
         buttons["VolumeButton"].onClick.AddListener(() => { Debug.Log("Volume Button"); });
     }
@@ -18,5 +18,10 @@ public class SettingUI : SceneUI
         //GameManager.UI.ShowPopUpUI("UI/SettingPopUp");
 
         GameManager.UI.ShowPopUpUI<PopUpUI>("UI/SettingPopUpUI");
+    }
+
+    public void OpenInfoWindowUI() 
+    {
+        GameManager.UI.ShowWindowUI<WindowUI>("UI/InfoWindow");
     }
 }

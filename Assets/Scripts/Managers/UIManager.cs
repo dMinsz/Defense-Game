@@ -33,9 +33,9 @@ public class UIManager : MonoBehaviour
 
         // gameSceneCanvas.sortingOrder = 1;
 
-        inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
-        inGameCanvas.gameObject.name = "InGameCanvas";
-        inGameCanvas.sortingOrder = 0;
+        //inGameCanvas = GameManager.Resource.Instantiate<Canvas>("UI/Canvas");
+        //inGameCanvas.gameObject.name = "InGameCanvas";
+        //inGameCanvas.sortingOrder = 0;
     }
 
     public T ShowPopUpUI<T>(T popUpUI) where T : PopUpUI
@@ -91,37 +91,38 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    //public T ShowWindowUI<T>(T windowUI) where T : WindowUI
-    //{
-    //    T ui = GameManager.Pool.GetUI(windowUI);
-    //    ui.transform.SetParent(windowCanvas.transform, false);
-    //    return ui;
-    //}
+    public T ShowWindowUI<T>(T windowUI) where T : WindowUI
+    {
+        T ui = GameManager.Pool.GetUI(windowUI);
+        ui.transform.SetParent(windowCanvas.transform, false);
+        return ui;
+    }
 
-    //public T ShowWindowUI<T>(string path) where T : WindowUI
-    //{
-    //    T ui = GameManager.Resource.Load<T>(path);
-    //    return ShowWindowUI(ui);
-    //}
+    public T ShowWindowUI<T>(string path) where T : WindowUI
+    {
+        T ui = GameManager.Resource.Load<T>(path);
+        return ShowWindowUI(ui);
+    }
 
-    //public void SelectWindowUI<T>(T windowUI) where T : WindowUI
-    //{
-    //    windowUI.transform.SetAsLastSibling();
-    //}
+    public void SelectWindowUI<T>(T windowUI) where T : WindowUI
+    {
+        windowUI.transform.SetAsLastSibling();
+    }
 
-    //public void CloseWindowUI<T>(T windowUI) where T : WindowUI
-    //{
-    //    GameManager.Pool.ReleaseUI(windowUI.gameObject);
-    //}
-    //public void ClearWindowUI()
-    //{
-    //    WindowUI[] windows = windowCanvas.GetComponentsInChildren<WindowUI>();
+    public void CloseWindowUI<T>(T windowUI) where T : WindowUI
+    {
+        GameManager.Pool.ReleaseUI(windowUI.gameObject);
+    }
 
-    //    foreach (WindowUI windowUI in windows)
-    //    {
-    //        GameManager.Pool.ReleaseUI(windowUI.gameObject);
-    //    }
-    //}
+    public void ClearWindowUI()
+    {
+        WindowUI[] windows = windowCanvas.GetComponentsInChildren<WindowUI>();
+
+        foreach (WindowUI windowUI in windows)
+        {
+            GameManager.Pool.ReleaseUI(windowUI.gameObject);
+        }
+    }
 
     //public T ShowInGameUI<T>(T gameUi) where T : InGameUI
     //{
