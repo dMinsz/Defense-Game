@@ -6,6 +6,9 @@ public class Tower : MonoBehaviour
 {
     protected List<EnemyController> enemies = new List<EnemyController>();
 
+    [HideInInspector] public int attackDamage;
+    [HideInInspector] public float attackDelay;
+
     public void AddEnemy(EnemyController enemy)
     {
         enemies.Add(enemy);

@@ -47,8 +47,14 @@ public class TowerPlace : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void BuildTower(TowerData.TowerInfo info)
     {
+        
         GameManager.Resource.Destroy(gameObject);
-        GameManager.Resource.Instantiate(info.tower, transform.position, transform.rotation);
+
+        Tower tower = GameManager.Resource.Instantiate(info.tower, transform.position, transform.rotation);
+
+        tower.GetComponentInChildren<SphereCollider>().radius = info.attackRange;
+        tower.attackDamage = info.attackDamage;
+        tower.attackDelay= info.attackDelay;
     }
 
 

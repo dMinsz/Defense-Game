@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3176655927434121231
+--- !u!1 &3772941503515902062
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3178703194962299125}
-  - component: {fileID: 3198987482341535925}
-  - component: {fileID: 3189085179685535195}
+  - component: {fileID: 5560316033709441903}
+  - component: {fileID: 3129455743909597929}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -18,50 +17,124 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3178703194962299125
+--- !u!4 &5560316033709441903
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176655927434121231}
+  m_GameObject: {fileID: 3772941503515902062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4082303477871987896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3198987482341535925
-MeshFilter:
+--- !u!114 &3129455743909597929
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176655927434121231}
-  m_Mesh: {fileID: 4300000, guid: 9264a3c0d21d83e48bc213eaa785772e, type: 3}
---- !u!23 &3189085179685535195
-MeshRenderer:
+  m_GameObject: {fileID: 3772941503515902062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a234d50a4edf23042acb480beebdf898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowSpeed: 10
+--- !u!1001 &4083025579067842014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5560316033709441903}
+    m_Modifications:
+    - target: {fileID: 1734245126228380, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_Name
+      value: ArrowRender
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6979934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.71610427
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -91.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+--- !u!4 &4082303477871987896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+  m_PrefabInstance: {fileID: 4083025579067842014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4084759814526194754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1734245126228380, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+  m_PrefabInstance: {fileID: 4083025579067842014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &5053134130766078380
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176655927434121231}
+  m_GameObject: {fileID: 4084759814526194754}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c717fb89e24ff384785039c0f1169eee, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,4 +155,69 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_Time: 5
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.48181817
+        value: 0.013793111
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 33924
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1

@@ -12,7 +12,7 @@ public class Arrow : MonoBehaviour
 
     private void Awake()
     {
-        trail = GetComponent<TrailRenderer>();
+        trail = GetComponentInChildren<TrailRenderer>();
     }
 
     public void SetTarget(EnemyController enemy)

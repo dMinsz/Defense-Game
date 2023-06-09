@@ -72,5 +72,7 @@ public class BuildUI : InGameUI
         CloseUI();
 
         towerPlace.BuildTower(towerData.Towers[towerIndex]);
+
+
     }
 }

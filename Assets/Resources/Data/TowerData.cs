@@ -16,9 +16,15 @@ public class TowerData : ScriptableObject
         public string description;
 
         public Tower tower;
-
+        [Header("build Status")]
         public float buildTime;
         public float buildCost;
         public float sellCost;
+
+        [Header("Attack Status")]
+        public float attackRange;
+        public int attackDamage;
+        public float attackDelay;
+
     }
 }
