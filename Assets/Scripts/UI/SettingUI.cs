@@ -11,6 +11,7 @@ public class SettingUI : SceneUI
         buttons["InfoButton"].onClick.AddListener(() => { OpenInfoWindowUI(); });
         buttons["SettingButton"].onClick.AddListener(() => { OpenPausePopUpUI(); });
         buttons["VolumeButton"].onClick.AddListener(() => { Debug.Log("Volume Button"); });
+        buttons["GameEndButton"].onClick.AddListener(() => { Application.Quit(); });
     }
 
     public void OpenPausePopUpUI() 

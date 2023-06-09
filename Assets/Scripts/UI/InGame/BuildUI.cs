@@ -68,7 +68,6 @@ public class BuildUI : InGameUI
 
 
     public void BuildTower()
-
     {
         CloseUI();
 
