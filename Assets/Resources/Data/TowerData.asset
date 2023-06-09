@@ -19,7 +19,7 @@ MonoBehaviour:
     buildTime: 1
     buildCost: 10
     sellCost: 5
-    attackRange: 15
+    attackRange: 20
     attackDamage: 10
     attackDelay: 0.5
   - name: CanonTower
@@ -37,6 +37,6 @@ MonoBehaviour:
     buildTime: 3
     buildCost: 25
     sellCost: 15
-    attackRange: 30
-    attackDamage: 20
+    attackRange: 15
+    attackDamage: 10
     attackDelay: 1
