@@ -19,24 +19,24 @@ MonoBehaviour:
     buildTime: 1
     buildCost: 10
     sellCost: 5
-    attackRange: 30
+    attackRange: 15
     attackDamage: 10
-    attackDelay: 1
+    attackDelay: 0.5
   - name: CanonTower
     description: That is Canon Tower
     tower: {fileID: 7843634574687890928, guid: 0bb5efdba1843404cab4d145eb286a9c, type: 3}
     buildTime: 3
     buildCost: 20
     sellCost: 10
-    attackRange: 30
-    attackDamage: 20
-    attackDelay: 3
+    attackRange: 20
+    attackDamage: 15
+    attackDelay: 2
   - name: MageTower
     description: That is Mage Tower
     tower: {fileID: 8135388393784374020, guid: d84d885ee31a7664e8601d7a89d3d603, type: 3}
     buildTime: 3
     buildCost: 25
     sellCost: 15
-    attackRange: 40
+    attackRange: 30
     attackDamage: 20
-    attackDelay: 3
+    attackDelay: 1

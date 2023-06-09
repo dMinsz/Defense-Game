@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3772941503515902062
+--- !u!1 &7677368723345165166
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,119 +8,119 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5560316033709441903}
-  - component: {fileID: 3129455743909597929}
+  - component: {fileID: 171314845165600355}
+  - component: {fileID: 1681974549548496757}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: MagicMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5560316033709441903
+--- !u!4 &171314845165600355
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3772941503515902062}
+  m_GameObject: {fileID: 7677368723345165166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4082303477871987896}
+  - {fileID: 5692114267128560449}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3129455743909597929
+--- !u!114 &1681974549548496757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3772941503515902062}
+  m_GameObject: {fileID: 7677368723345165166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a234d50a4edf23042acb480beebdf898, type: 3}
+  m_Script: {fileID: 11500000, guid: 24c03bc91798dd849baeaeb0337c94df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 10
---- !u!1001 &4083025579067842014
+  Speed: 20
+--- !u!1001 &5692114267128947137
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5560316033709441903}
+    m_TransformParent: {fileID: 171314845165600355}
     m_Modifications:
-    - target: {fileID: 1734245126228380, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 100000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_Name
-      value: ArrowRender
+      value: IceLance
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
---- !u!4 &4082303477871987896 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
+--- !u!4 &5692114267128560449 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4102569786528102, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
-  m_PrefabInstance: {fileID: 4083025579067842014}
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
+  m_PrefabInstance: {fileID: 5692114267128947137}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4084759814526194754 stripped
+--- !u!1 &5692114267128915809 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1734245126228380, guid: c246c13351c285146b91ea26d3e4cda7, type: 3}
-  m_PrefabInstance: {fileID: 4083025579067842014}
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 735d1d1e5a1d1934589aa44da6a7ea75, type: 3}
+  m_PrefabInstance: {fileID: 5692114267128947137}
   m_PrefabAsset: {fileID: 0}
---- !u!96 &5053134130766078380
+--- !u!96 &7679622497360667467
 TrailRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4084759814526194754}
+  m_GameObject: {fileID: 5692114267128915809}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -134,7 +134,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5de4a4e91ddb59479cdec033c43cc3b, type: 2}
+  - {fileID: 2100000, guid: d4c406b5d941319458ddccf4b6f76be3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,8 +163,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.26515198
+        time: 0.022949219
+        value: 0.189394
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -172,8 +172,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.48181817
-        value: 0.013793111
+        time: 0.39672127
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -185,7 +185,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -194,7 +194,7 @@ TrailRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 33924
+      ctime1: 65535
       ctime2: 0
       ctime3: 0
       ctime4: 0
